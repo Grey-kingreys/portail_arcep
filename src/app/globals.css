@@ -1,130 +1,118 @@
+/* globals.css */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    /* ARCEP Niger — Charte Graphique 2018 */
-    --background: 0 0% 98%;
-    --foreground: 0 0% 20%;
+@theme {
+  /* Fonts */
+  --font-display: 'Plus Jakarta Sans', sans-serif;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 20%;
+  /* ARCEP Niger colors */
+  --color-background: hsl(0 0% 98%);
+  --color-foreground: hsl(0 0% 20%);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 20%;
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(0 0% 20%);
 
-    --primary: 22 81% 55%;
-    --primary-foreground: 0 0% 100%;
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(0 0% 20%);
 
-    --secondary: 122 45% 46%;
-    --secondary-foreground: 0 0% 100%;
+  --color-primary: hsl(22 81% 55%);
+  --color-primary-foreground: hsl(0 0% 100%);
 
-    --muted: 30 20% 95%;
-    --muted-foreground: 0 0% 45%;
+  --color-secondary: hsl(122 45% 46%);
+  --color-secondary-foreground: hsl(0 0% 100%);
 
-    --accent: 22 81% 95%;
-    --accent-foreground: 22 81% 35%;
+  --color-muted: hsl(30 20% 95%);
+  --color-muted-foreground: hsl(0 0% 45%);
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+  --color-accent: hsl(22 81% 95%);
+  --color-accent-foreground: hsl(22 81% 35%);
 
-    --border: 0 0% 88%;
-    --input: 0 0% 88%;
-    --ring: 22 81% 55%;
+  --color-destructive: hsl(0 84% 60%);
+  --color-destructive-foreground: hsl(0 0% 100%);
 
-    --radius: 0.75rem;
+  --color-border: hsl(0 0% 88%);
+  --color-input: hsl(0 0% 88%);
+  --color-ring: hsl(22 81% 55%);
 
-    --sidebar-background: 122 45% 20%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 22 81% 55%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 122 40% 30%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 122 35% 30%;
-    --sidebar-ring: 22 81% 55%;
+  --radius: 0.75rem;
 
-    /* Custom ARCEP tokens */
-    --arcep-orange: 22 81% 55%;
-    --arcep-green: 122 45% 46%;
-    --arcep-green-dark: 122 45% 25%;
-    --arcep-green-light: 122 30% 92%;
-    --arcep-orange-light: 22 81% 94%;
-    --arcep-warm: 35 60% 97%;
-  }
+  /* Sidebar */
+  --color-sidebar: hsl(122 45% 20%);
+  --color-sidebar-foreground: hsl(0 0% 95%);
+  --color-sidebar-primary: hsl(22 81% 55%);
+  --color-sidebar-primary-foreground: hsl(0 0% 100%);
+  --color-sidebar-accent: hsl(122 40% 30%);
+  --color-sidebar-accent-foreground: hsl(0 0% 95%);
+  --color-sidebar-border: hsl(122 35% 30%);
+  --color-sidebar-ring: hsl(22 81% 55%);
 
-  .dark {
-    --background: 122 20% 8%;
-    --foreground: 30 20% 95%;
-    --card: 122 20% 12%;
-    --card-foreground: 30 20% 95%;
-    --popover: 122 20% 12%;
-    --popover-foreground: 30 20% 95%;
-    --primary: 22 81% 58%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 122 45% 35%;
-    --secondary-foreground: 0 0% 95%;
-    --muted: 122 15% 18%;
-    --muted-foreground: 30 15% 65%;
-    --accent: 22 50% 20%;
-    --accent-foreground: 22 81% 70%;
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 0 0% 95%;
-    --border: 122 15% 22%;
-    --input: 122 15% 22%;
-    --ring: 22 81% 58%;
-    --sidebar-background: 122 20% 6%;
-    --sidebar-foreground: 30 20% 90%;
-    --sidebar-primary: 22 81% 58%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 122 20% 15%;
-    --sidebar-accent-foreground: 30 20% 90%;
-    --sidebar-border: 122 15% 18%;
-    --sidebar-ring: 22 81% 58%;
-  }
+  /* Custom ARCEP tokens */
+  --color-arcep-orange: hsl(22 81% 55%);
+  --color-arcep-green: hsl(122 45% 46%);
+  --color-arcep-green-dark: hsl(122 45% 25%);
+  --color-arcep-green-light: hsl(122 30% 92%);
+  --color-arcep-orange-light: hsl(22 81% 94%);
+  --color-arcep-warm: hsl(35 60% 97%);
+}
+
+/* Dark mode overrides */
+.dark {
+  --color-background: hsl(122 20% 8%);
+  --color-foreground: hsl(30 20% 95%);
+  --color-card: hsl(122 20% 12%);
+  --color-card-foreground: hsl(30 20% 95%);
+  --color-primary: hsl(22 81% 58%);
+  --color-secondary: hsl(122 45% 35%);
+  --color-secondary-foreground: hsl(0 0% 95%);
+  --color-muted: hsl(122 15% 18%);
+  --color-muted-foreground: hsl(30 15% 65%);
+  --color-accent: hsl(22 50% 20%);
+  --color-accent-foreground: hsl(22 81% 70%);
+  --color-border: hsl(122 15% 22%);
+  --color-input: hsl(122 15% 22%);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  max-width: 80rem; /* ~1280px, équivalent de max-w-7xl */
 }
 
 @layer base {
   * {
-    border-color: hsl(var(--border));
+    border-color: var(--color-border);
   }
 
   body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
+    background-color: var(--color-background);
+    color: var(--color-foreground);
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-display);
   }
 }
 
 @layer utilities {
   .text-gradient-arcep {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(
-      135deg,
-      hsl(var(--arcep-orange)),
-      hsl(var(--arcep-green))
-    );
+    background-image: linear-gradient(135deg, var(--color-arcep-orange), var(--color-arcep-green));
   }
 
+
+
   .bg-gradient-arcep {
-    background-image: linear-gradient(
-      135deg,
-      hsl(var(--arcep-orange)),
-      hsl(var(--arcep-green))
-    );
+    background-image: linear-gradient(135deg, var(--color-arcep-orange), var(--color-arcep-green));
   }
 
   .bg-gradient-hero {
     background-image: linear-gradient(
       160deg,
-      hsl(var(--arcep-green-dark)) 0%,
-      hsl(var(--arcep-green)) 60%,
-      hsl(var(--arcep-orange) / 0.3) 100%
+      var(--color-arcep-green-dark) 0%,
+      var(--color-arcep-green) 60%,
+      color-mix(in srgb, var(--color-arcep-orange) 30%, transparent) 100%
     );
   }
 }

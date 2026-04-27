@@ -11,10 +11,6 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img src={arcepLogo.src} alt="ARCEP Niger" className="h-12 w-auto"/>
-              <div>
-                <p className="font-display font-bold text-sm text-white">ARCEP Niger</p>
-                <p className="text-[10px] text-white/60">Autorité de Régulation</p>
-              </div>
             </div>
             <p className="text-sm text-white/70 leading-relaxed">
               Portail unique des services numériques de l'Autorité de Régulation des Communications Électroniques et de la Poste du Niger.
