@@ -74,7 +74,7 @@ const Header = () => {
                 </a>
               ))}
               <Button size="sm" className="mt-2 font-display" asChild>
-                <Link href="/espace-operateur">Espace Opérateur</Link>
+                <Link href="/connexion">Connexion</Link>
               </Button>
             </nav>
           </div>
