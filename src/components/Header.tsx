@@ -29,10 +29,6 @@ const Header = () => {
         <div className="container flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-3">
             <img src={arcepLogo.src} alt="ARCEP Niger" className="h-10 w-auto" />
-            <div className="hidden md:block">
-              <p className="font-display font-bold text-sm leading-tight text-secondary">ARCEP</p>
-              <p className="text-[10px] text-muted-foreground leading-tight">Autorité de Régulation des<br/>Communications Électroniques et de la Poste</p>
-            </div>
           </Link>
 
           {/* Desktop nav */}
@@ -57,7 +53,7 @@ const Header = () => {
 
           <div className="flex items-center gap-2">
             <Button size="sm" className="hidden sm:inline-flex font-display" asChild>
-              <Link href="/espace-operateur">Espace Opérateur</Link>
+              <Link href="/connexion">Connexion</Link>
             </Button>
             <button
               className="lg:hidden p-2 rounded-md hover:bg-accent"
@@ -78,7 +74,7 @@ const Header = () => {
                 </a>
               ))}
               <Button size="sm" className="mt-2 font-display" asChild>
-                <Link href="/espace-operateur">Espace Opérateur</Link>
+                <Link href="/connexion">Connexion</Link>
               </Button>
             </nav>
           </div>

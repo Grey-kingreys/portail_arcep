@@ -10,7 +10,23 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: 'Espace Opérateur',  
+  title: 'Espace Opérateur',    // → "Espace Opérateur | ARCEP" (grâce au template)
+  description: 'Accédez à vos démarches réglementaires, déclarez vos réseaux...',
+  keywords: ['ARCEP', 'opérateur', 'régulation', 'télécommunications'],
+  openGraph: {
+    title: 'Espace Opérateur | ARCEP',
+    description: 'Accédez à vos démarches réglementaires...',
+    url: 'https://portail.arcep.fr/espace-operateur',
+    siteName: 'ARCEP',
+    images: [{ url: '/og-operateur.png', width: 1200, height: 630 }],
+    locale: 'fr_FR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Espace Opérateur | ARCEP',
+    images: ['/og-operateur.png'],
+  },
 }
 
 
@@ -33,10 +49,9 @@ const quickActions = [
 ];
 
 
+
 export default function EspaceOperateurPage() {
   return (
-    <main>
-      <Header />
       <main className="flex-1 bg-muted/30">
         {/* Breadcrumb + Title */}
         <div className="bg-secondary text-secondary-foreground py-8">
@@ -115,7 +130,5 @@ export default function EspaceOperateurPage() {
           </div>
         </div>
       </main>
-      <Footer />
-    </main>
   )
 }
